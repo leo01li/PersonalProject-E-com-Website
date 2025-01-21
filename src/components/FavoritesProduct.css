@@ -1,0 +1,22 @@
+.favorites-display {
+    display: flex;
+    flex-wrap: wrap;
+}
+.favorite-items {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px;
+    width: 48%;
+}
+
+.empty-favorites {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}

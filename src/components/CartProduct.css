@@ -1,0 +1,58 @@
+.cart-items {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    height: auto;
+}
+
+.img {
+    width: 200px;
+    margin: 10px 100px 15px 90px;
+    min-height: 200px;
+}
+
+.decrease-button {
+    margin: 5px;
+    width: 30px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.increase-button {
+    margin: 5px;
+    width: 30px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.increase-button:hover {
+    background-color: rgb(155, 155, 155);
+}
+
+.decrease-button:hover {
+    background-color: rgb(155, 155, 155);
+}
+
+.amount {
+    width: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.remove-button {
+    width: 110px;
+    margin-top: 5px;
+    border-radius: 6px;
+    height: 25px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: rgb(155, 155, 155);
+}
+
