@@ -32,10 +32,12 @@ export default function ProductList({ products }) {
           ))}
         </form>
             </div>
+    <div className="product-catalog">
     <div className="product-list">
       {filteredProducts.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
+    </div>
     </div>
     </div>
   );

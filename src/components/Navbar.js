@@ -3,6 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa';
 // import { CartContext } from './Features/ContextProvider';
 import "./Navbar.css"
 
@@ -17,7 +18,7 @@ function Navbar() {
     <nav>
         <Link to='/'>
             <div className="fill">
-                <h1 className="fill-name">Fill</h1>
+                <h1 className="fill-name">eCom</h1>
              </div>
         </Link>
 
@@ -30,6 +31,7 @@ function Navbar() {
 
                 />
             {/* </div> */}
+            <FaSearch className='search-icon'/>
         </div>
 
         <div className="user-profile">

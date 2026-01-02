@@ -51,7 +51,7 @@ input {
 .search-icon {
     width: 20px;
     height: 20px;
-    padding: 10px;
+    padding-right: 15px;
     color: black;
 }
 
