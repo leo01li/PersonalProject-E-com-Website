@@ -24,7 +24,7 @@ export default function ProductCard({ product }) {
 
     return (
     <div className="product-card">
-  <Link className="product-link" to={`/product/${product.id}`}>
+  <Link className="product-link" to={`/product/${product.id}`} state={{ product }}>
   <div className="product-image-container">
     <img className="product-image" src={product.image} alt={product.title} />
   </div>

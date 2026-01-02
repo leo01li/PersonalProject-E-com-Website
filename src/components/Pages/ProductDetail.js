@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext, FavoritesContext } from "../Features/ContextProvider";
 
 
 export default function ProductDetail() {
   const { id } = useParams();
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const location = useLocation();
+
+  const [product, setProduct] = useState(location.state?.product ?? null);
+  const [loading, setLoading] = useState(!location.state?.product);
   const [err, setErr] = useState("");
 
   const { cart, cartDispatch } = useContext(CartContext);
@@ -28,12 +30,14 @@ export default function ProductDetail() {
 
 
   useEffect(() => {
+    if (product) return;
+  
     let ignore = false;
-
+  
     async function load() {
       setLoading(true);
       setErr("");
-
+  
       try {
         const res = await fetch(`https://fakestoreapi.com/products/${id}`);
         if (!res.ok) throw new Error("Failed to fetch product");
@@ -45,12 +49,11 @@ export default function ProductDetail() {
         if (!ignore) setLoading(false);
       }
     }
-
+  
     load();
-    return () => {
-      ignore = true;
-    };
-  }, [id]);
+    return () => { ignore = true; };
+  }, [id, product]);
+  
 
   if (loading) return <div className="pd-wrap">Loading…</div>;
   if (err) return <div className="pd-wrap">Error: {err}</div>;
