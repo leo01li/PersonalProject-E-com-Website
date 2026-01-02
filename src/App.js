@@ -9,6 +9,7 @@ import Profile from './components/Pages/Profile';
 import Register from './components/Pages/Register';
 import SignIn from './components/Pages/Sign-In';
 import ContextProvider from './components/Features/ContextProvider';
+import ProductDetail from './components/Pages/ProductDetail';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/signin' element={<SignIn />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/product/:id' element={<ProductDetail />} />
         </Routes>
       </Router>
     </ContextProvider>

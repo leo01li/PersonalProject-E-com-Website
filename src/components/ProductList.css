@@ -1,18 +1,16 @@
 .product-screen {
     display: flex;
-}
-
-.categories {
+    gap: 24px;
+  }
+  
+  .categories {
     margin-top: 20px;
-    margin-right: 50px;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-
-.select {
-    margin-bottom: 20px;
-}
-
-.select label {
-    margin-left: 10px;
-    font-weight: 900; 
-    width: 100%;
-}
+  
+  

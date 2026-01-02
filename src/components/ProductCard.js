@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import './ProductCard.css'
 import { CartContext, FavoritesContext } from "./Features/ContextProvider";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
   const { cart, cartDispatch } = useContext(CartContext)
@@ -23,14 +24,17 @@ export default function ProductCard({ product }) {
 
     return (
     <div className="product-card">
+  <Link className="product-link" to={`/product/${product.id}`}>
   <div className="product-image-container">
     <img className="product-image" src={product.image} alt={product.title} />
   </div>
   <div className="product-info">
-    <h2>{product.title}</h2>
-    <p className="product-desc">{product.description}</p>
+    <h2 className="product-title">{product.title}</h2>
+    {/* <p className="product-desc">{product.description}</p> */}
     <p>Price: ${product.price}</p>
-    <div className="buttons">
+  </div>
+  </Link>
+  <div className="buttons">
     <button className="add-to-cart" 
     onClick={() => handleClick("cart")}
     disabled={inCart}>{inCart ? "Added to Cart" : "Add to Cart"}</button>
@@ -38,7 +42,6 @@ export default function ProductCard({ product }) {
     onClick={() => handleClick("favorite")}
     disabled={inFavorites}>{inFavorites ? "Favorited" : "Favorite"}</button>
     </div>
-  </div>
 </div>
   );
 }

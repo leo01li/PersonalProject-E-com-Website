@@ -1,14 +1,13 @@
 import React, { useState, useContext } from 'react';
 import { FaUserCircle } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { CartContext } from './Features/ContextProvider';
+// import { CartContext } from './Features/ContextProvider';
 import "./Navbar.css"
 
 function Navbar() {
-    const {cart} = useContext(CartContext)
+    // const {cart} = useContext(CartContext)
 
     const [click, setClick] = useState(false);
 
@@ -23,12 +22,14 @@ function Navbar() {
         </Link>
 
         <div className="nav-container">
-            <input type="text" className="search" placeholder="Enter product name" />
-            <div className="search-button" onClick={handleClick}>
-            <a href="#">
-                <FaSearch className="search-icon" />
-            </a>
-            </div>
+            {/* <div className='search-bar'> */}
+                <input
+                    className='search'
+                    type='text'
+                    placeholder='Search...'
+
+                />
+            {/* </div> */}
         </div>
 
         <div className="user-profile">

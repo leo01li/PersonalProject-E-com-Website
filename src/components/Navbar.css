@@ -39,15 +39,13 @@ input {
    font-size: auto;
 }
 
-.search {
-    margin-top: auto;
-    margin-bottom: auto;    
+.search {  
     background-color: white;
     border: none;
     font-size: 20px;
     width: 450px;
     height: 42px;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
 }
 
 .search-icon {
