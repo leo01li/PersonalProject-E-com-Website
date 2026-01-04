@@ -1,10 +1,12 @@
 .product-screen {
   display: flex;
-  gap: 24px;
+  justify-content: center;
 }
 
 .categories {
   padding-top: 20px;
+  width: 220px;
+  flex-shrink: 0;
 }
 
 .product-catalog {
@@ -27,5 +29,16 @@
 input[type="radio"] {
   margin-right: 8px;
 }
+
+@media (max-width: 768px) {
+  .categories {
+    display: none;
+  }
+  .product-list {
+    max-width: 100%;
+    padding: 0 200px;
+  }
+}
+
 
 

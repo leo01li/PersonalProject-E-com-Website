@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 // import { CartContext } from './Features/ContextProvider';
 import "./Navbar.css"
+import HamburgerMenu from './Hamburger';
 
 function Navbar() {
     // const {cart} = useContext(CartContext)
@@ -23,15 +24,15 @@ function Navbar() {
         </Link>
 
         <div className="nav-container">
-            {/* <div className='search-bar'> */}
+            {/* <div className='search-bar'>
                 <input
                     className='search'
                     type='text'
                     placeholder='Search...'
 
                 />
-            {/* </div> */}
-            <FaSearch className='search-icon'/>
+            </div>
+            <FaSearch className='search-icon'/> */}
         </div>
 
         <div className="user-profile">
@@ -48,6 +49,10 @@ function Navbar() {
                 <FaUserCircle className="profile-icon" onClick={handleClick}/>
             </Link>
 
+            <div className='hamburger-wrapper'>
+            <HamburgerMenu/>
+            </div>
+
         </div>
 
     </nav>
@@ -55,4 +60,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar;

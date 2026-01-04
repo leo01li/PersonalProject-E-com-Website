@@ -99,14 +99,17 @@ input {
     color: white;
 }
 
+.hamburger-wrapper {
+    display: none;
+}
 
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 768px) {
+    .hamburger-wrapper {
+      display: block;
+    }
+    .heart-icon,
+    .cart-icon,
+    .profile-icon {
+    display: none;
+  }
+}
