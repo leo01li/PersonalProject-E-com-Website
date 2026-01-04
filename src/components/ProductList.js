@@ -16,23 +16,21 @@ export default function ProductList({ products }) {
     <div className="product-screen">
     <div className="categories">
     <h2>Categories</h2>
-    <form>
-          {["all", "electronics", "jewelery", "men's clothing", "women's clothing"].map((category) => (
-            <div className="select" key={category}>
-              <input
-                type="radio"
-                id={category}
-                name="category"
-                value={category}
-                checked={selectedCategory === category}
-                onChange={handleCategoryChange}
-              />
-              <label htmlFor={category}>{category}</label>
+    <select
+      className="category-dropdown"
+      value={selectedCategory}
+      onChange={handleCategoryChange}
+    >
+      {["all", "electronics", "jewelery", "men's clothing", "women's clothing"].map(
+        (category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        )
+      )}
+  </select>
             </div>
-          ))}
-        </form>
-            </div>
-    <div className="product-catalog">
+    <div className="product-data">
     <div className="product-list">
       {filteredProducts.map((product) => (
         <ProductCard key={product.id} product={product} />

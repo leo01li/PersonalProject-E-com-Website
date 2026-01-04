@@ -30,6 +30,17 @@ input[type="radio"] {
   margin-right: 8px;
 }
 
+.category-dropdown {
+  width: 200px;
+  padding: 8px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
   .categories {
     display: none;
