@@ -3,14 +3,25 @@
     top: 0;
     right: 0;
     height: 100vh;
-    background-color: white;
-    z-index: 1001;
-    padding: 60px 20px;
+    width: 75vw;
+    max-width: 320px;
+    background-color: #fff;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    font-family: sans-serif;
-    font-size: 20px;
-    width: 60vw;
-    transition: all 0.3s ease-in-out;
-    justify-self: end;
-}
+    gap: 20px;
+    font-family: system-ui, sans-serif;
+    font-size: 18px;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .hamburger-menu a {
+    font-size: 22px;         
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .hamburger-menu > .hamburger-react {
+    align-self: flex-end;
+    margin-right: 30px;
+  }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext, FavoritesContext } from "../Features/ContextProvider";
+import "./ProductDetail.css"
 
 
 export default function ProductDetail() {
@@ -67,8 +68,8 @@ export default function ProductDetail() {
         </div>
 
         <div className="pd-info">
-          <p className="pd-category">{product.category}</p>
           <h1 className="pd-title">{product.title}</h1>
+          <p className="pd-category">{product.category}</p>
 
           <div className="pd-rating">
             <span>⭐ {product?.rating?.rate ?? "N/A"}</span>
@@ -76,7 +77,8 @@ export default function ProductDetail() {
           </div>
 
           <p className="pd-price">${product.price}</p>
-          <p className="pd-desc">{product.description}</p>
+          <div className="about">About this item</div>
+          <p className="pd-desc">• {product.description}</p>
 
           <div className="buttons">
             <button className="add-to-cart" 

@@ -17,9 +17,10 @@ function HamburgerMenu() {
             toggled={open}
             toggle={setOpen}
         />
-        <Link to='/Favorites'>Favorites</Link>
-        <Link to='/Cart'>Cart</Link>
-        <Link to='/SignIn'>Sign In</Link>
+        <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+        <Link to="/Favorites" onClick={() => setOpen(false)}>Favorites</Link>
+        <Link to="/Cart" onClick={() => setOpen(false)}>Cart</Link>
+        <Link to="/SignIn" onClick={() => setOpen(false)}>Sign In</Link>
     </div>}
     </div>
 }
